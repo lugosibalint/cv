@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lugosi Bálint - Önéletrajz</title>
   <style>
     :root {
@@ -12,11 +12,34 @@
       --section-bg: #2a2a2a;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .fade-in:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .header {
@@ -27,18 +50,19 @@
       border-bottom: 1px solid #444;
     }
 
-    .photo {
+    .photo img {
       width: 100px;
       height: 100px;
-      background-color: #555;
       border-radius: 50%;
-      margin-right: 2rem;
+      object-fit: cover;
+      border: 2px solid var(--accent-color);
     }
 
     .name-title {
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
+      margin-left: 2rem;
     }
 
     .name-title h1 {
@@ -74,6 +98,11 @@
       padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.02);
     }
 
     .section h2 {
@@ -104,14 +133,24 @@
       .container {
         grid-template-columns: 1fr;
       }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .name-title {
+        margin-left: 0;
+        margin-top: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
+  <div class="header fade-in">
     <div class="photo">
-      <!-- Ide jöhet később egy kép, ha van -->
+      <img src="https://raw.githubusercontent.com/lugosibalint/cv/refs/heads/main/image.jpg" alt="Profilkép">
     </div>
     <div class="name-title">
       <h1>Lugosi Bálint</h1>
@@ -121,43 +160,13 @@
 
   <div class="container">
     <div class="left">
-      <div class="section">
+      <div class="section fade-in">
         <h2>Kapcsolat</h2>
         <p>Magyarország / Hungary</p>
         <p>+36 30 / 724 - 8919</p>
         <p><a href="mailto:lugibalint42@gmail.com">lugibalint42@gmail.com</a></p>
       </div>
 
-      <div class="section">
+      <div class="section fade-in">
         <h2>Bemutatkozás</h2>
-        <p>Pályakezdő informatikus vagyok, jelenleg egyetemi tanulmányaimat végzem az informatika területén és részmunkaidőben dolgozom IT Szakértő munkakörben. Lelkes és nyitott vagyok, hogy minél több oldalát megismerjem az informatikának. Jelenlegi célom, hogy később a szoftverfejlesztés területén helyezkedjek el. Szeretem a kreatív problémamegoldást, és szívesen dolgozom csapatban.</p>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="section">
-        <h2>Tanulmányok</h2>
-        <ul>
-          <li>2019-09 – 2023-06: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Informatika Ismeretek Középszint</li>
-          <li>2023-09 – 2024-05: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Szoftverfejlesztő és tesztelő OKJ</li>
-          <li>2024-09 – : Budapesti Gazdasági Egyetem, Pénzügyi és Számviteli Kar – Gazdaságinformatikus</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h2>Szakmai tapasztalat</h2>
-        <ul>
-          <li>2023-09 – 2024-05: Lionsdale Studio KFT. – Gyakorlati képzés – Webfejlesztés</li>
-          <li>2025-04 – : Kínai-Magyar Vasúti Nonprofit Zrt. – IT Szakértő</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h2>Nyelvtudás</h2>
-        <p>Angol nyelv – Középfok (B2)</p>
-      </div>
-    </div>
-  </div>
-
-</body>
-</html>
+        <p>Pályakezdő informatikus vagy

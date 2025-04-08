@@ -1,66 +1,190 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lugosi Bálint - Önéletrajz</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
+
 <body>
+  <main id="content-hu" style="display: none;">
 
-  <div class="header fade-in">
-    <div class="photo">
-      <img src="https://raw.githubusercontent.com/lugosibalint/cv/refs/heads/main/img/avatar.jpg" alt="Profilkép">
-    </div>
-    <div class="name-title">
-      <h1 id="name">Lugosi Bálint</h1>
-      <p id="title">Informatikus</p>
-    </div>
-    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">
-      <img id="flagIcon" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Hungary.svg" alt="Hungarian Flag">
-    </button>
-  </div>
-
-  <div class="container">
-    <div class="left">
-      <div class="section fade-in">
-        <h2 id="contactTitle">Kapcsolat</h2>
-        <p id="location">Magyarország / Hungary</p>
-        <p id="phone">+36 30 / 724 - 8919</p>
-        <p><a href="mailto:lugibalint42@gmail.com" id="email">lugibalint42@gmail.com</a></p>
+    <div class="header ">
+      <div class="photo">
+        <img src="https://raw.githubusercontent.com/lugosibalint/cv/refs/heads/main/img/avatar.jpg" alt="Profilkép">
       </div>
-
-      <div class="section fade-in">
-        <h2 id="bioTitle">Bemutatkozás</h2>
-        <p id="bio">Pályakezdő informatikus vagyok, jelenleg egyetemi tanulmányaimat végzem az informatika területén és részmunkaidőben dolgozom IT Szakértő munkakörben. Lelkes és nyitott vagyok, hogy minél több oldalát megismerjem az informatikának. Jelenlegi célom, hogy később a szoftverfejlesztés területén helyezkedjek el. Szeretem a kreatív problémamegoldást, és szívesen dolgozom csapatban.</p>
+      <div class="name-title">
+        <h1 id="name">Lugosi Bálint</h1>
+        <p id="title">Informatikus</p>
       </div>
+      <button class="lang-btn" id="btn_hun">
+        <img id="flagIcon" src="https://raw.githubusercontent.com/lugosibalint/cv/refs/heads/main/img/flag_hun.gif"
+          alt="Hunagrian">
+      </button>
     </div>
 
-    <div class="right">
-      <div class="section fade-in">
-        <h2 id="educationTitle">Tanulmányok</h2>
-        <ul>
-          <li id="study1">2019-09 – 2023-06: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Informatika Ismeretek Középszint</li>
-          <li id="study2">2023-09 – 2024-05: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Szoftverfejlesztő és tesztelő OKJ</li>
-          <li id="study3">2024-09 – : Budapesti Gazdasági Egyetem, Pénzügyi és Számviteli Kar – Gazdaságinformatikus</li>
-        </ul>
+    <div class="container">
+      <div class="left">
+
+        <div class="section ">
+          <h2 id="bioTitle">Bemutatkozás</h2>
+          <p id="bio">Pályakezdő informatikus vagyok, jelenleg egyetemi tanulmányaimat végzem az informatika területén
+            és részmunkaidőben dolgozom IT Szakértő munkakörben. Lelkes és nyitott vagyok, hogy minél több oldalát
+            megismerjem az informatikának. Jelenlegi célom, hogy később a szoftverfejlesztés területén helyezkedjek el.
+            Szeretem a kreatív problémamegoldást, és szívesen dolgozom csapatban.</p>
+        </div>
+
+        <div class="section ">
+          <h2 id="contactTitle">Kapcsolat</h2>
+          <p id="location">Magyarország, Budapest</p>
+          <p id="phone"><a href="tel:+36307248919">+36307248919</a></p>
+          <p><a href="mailto:lugibalint42@gmail.com" id="email">lugibalint42@gmail.com</a></p>
+        </div>
+
       </div>
 
-      <div class="section fade-in">
-        <h2 id="experienceTitle">Szakmai tapasztalat</h2>
-        <ul>
-          <li id="work1">2023-09 – 2024-05: Lionsdale Studio KFT. – Gyakorlati képzés – Webfejlesztés</li>
-          <li id="work2">2025-04 – : Kínai-Magyar Vasúti Nonprofit Zrt. – IT Szakértő</li>
-        </ul>
-      </div>
+      <div class="right">
+        <div class="section ">
+          <h2 id="educationTitle">Tanulmányok</h2>
+          <ul>
+            <li id="study1">
+              <p class="year">2019.09 – 2023-06</p>
+              <p class="name">BMSZC Bláthy Ottó Titusz Informatikai Technikum</p>
+              <p class="qualification">Informatika Ismeretek Középszint</p>
+            </li>
+            <li id="study2">
+              <p class="year">2023.09 – 2024-05</p>
+              <p class="name">BMSZC Bláthy Ottó Titusz Informatikai Technikum</p>
+              <p class="qualification">Szoftverfejlesztő és tesztelő OKJ</p>
+            </li>
+            <li id="study3">
+              <p class="year">2024.09 –</p>
+              <p class="name">Budapesti Gazdasági Egyetem, Pénzügyi és Számviteli Kar</p>
+              <p class="qualification">Gazdaságinformatikus</p>
+            </li>
+          </ul>
+        </div>
 
-      <div class="section fade-in">
-        <h2 id="languageTitle">Nyelvtudás</h2>
-        <p id="language">Angol nyelv – Középfok (B2)</p>
+        <div class="section ">
+          <h2 id="experienceTitle">Munkatapasztalat</h2>
+          <ul>
+            <li id="experience1">
+              <p class="year">2023.09 – 2024.05</p>
+              <p class="name">Lionsdale Studio KFT.</p>
+              <p class="qualification">Gyakorlati képzés – Webfejlesztés</p>
+            </li>
+            <li id="experience2">
+              <p class="year">2025.04 –</p>
+              <p class="name">Kínai-Magyar Vasúti Nonprofit Zrt.</p>
+              <p class="qualification">IT Szakértő</p>
+            </li>
+          </ul>
+        </div>
+        
+
+        <div class="section ">
+          <h2 id="languageTitle">Nyelvtudás</h2>
+          <ul>
+            <li id="language1">
+              <p class="name">Angol nyelv</p>
+              <p class="qualification">Középfok (B2)</p>
+            </li>
+          </ul>
+        </div>
+        
       </div>
     </div>
-  </div>
 
+  </main>
+  <main id="content-en" style="display: none;">
+    <div class="header ">
+      <div class="photo">
+        <img src="https://raw.githubusercontent.com/lugosibalint/cv/refs/heads/main/img/avatar.jpg" alt="Profile Picture">
+      </div>
+      <div class="name-title">
+        <h1 id="name">Bálint Lugosi</h1>
+        <p id="title">IT Specialist</p>
+      </div>
+      <button class="lang-btn" id="btn_us">
+        <img id="flagIcon" src="https://raw.githubusercontent.com/lugosibalint/cv/refs/heads/main/img/flag_us.gif"
+          alt="English">
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="left">
+
+        <div class="section ">
+          <h2 id="bioTitle">About Me</h2>
+          <p id="bio">I am a beginner IT specialist currently pursuing my university studies in the field of computer science
+            and working part-time as an IT Expert. I am eager and open to exploring all aspects of IT. My current goal is
+            to work in software development in the future. I enjoy creative problem-solving and love working in teams.</p>
+        </div>
+
+        <div class="section ">
+          <h2 id="contactTitle">Contact</h2>
+          <p id="location">Hungary, Budapest</p>
+          <p id="phone"><a href="tel:+36307248919">+36307248919</a></p>
+          <p><a href="mailto:lugibalint42@gmail.com" id="email">lugibalint42@gmail.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="right">
+        <div class="section ">
+          <h2 id="educationTitle">Education</h2>
+          <ul>
+            <li id="study1">
+              <p class="year">2019.09 – 2023.06</p>
+              <p class="name">BMSZC Bláthy Ottó Titusz Technical School of Informatics</p>
+              <p class="qualification">Intermediate Level of Computer Science Knowledge</p>
+            </li>
+            <li id="study2">
+              <p class="year">2023.09 – 2024.05</p>
+              <p class="name">BMSZC Bláthy Ottó Titusz Technical School of Informatics</p>
+              <p class="qualification">Software Developer and Tester (OKJ Qualification)</p>
+            </li>
+            <li id="study3">
+              <p class="year">2024.09 –</p>
+              <p class="name">Budapest Business School, Faculty of Finance and Accounting</p>
+              <p class="qualification">Business IT Specialist</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section ">
+          <h2 id="experienceTitle">Work Experience</h2>
+          <ul>
+            <li id="experience1">
+              <p class="year">2023.09 – 2024.05</p>
+              <p class="name">Lionsdale Studio KFT.</p>
+              <p class="qualification">Practical Training – Web Development</p>
+            </li>
+            <li id="experience2">
+              <p class="year">2025.04 –</p>
+              <p class="name">China-Hungary Railway Nonprofit Ltd.</p>
+              <p class="qualification">IT Expert</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section ">
+          <h2 id="languageTitle">Languages</h2>
+          <ul>
+            <li id="language1">
+              <p class="name">English</p>
+              <p class="qualification">Intermediate (B2)</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

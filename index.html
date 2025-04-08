@@ -30,11 +30,6 @@
       animation: fadeInUp 0.8s ease forwards;
     }
 
-    .fade-in:hover {
-      transform: scale(1.02);
-      transition: transform 0.3s ease;
-    }
-
     @keyframes fadeInUp {
       to {
         opacity: 1;
@@ -48,9 +43,10 @@
       padding: 2rem;
       background-color: var(--section-bg);
       border-bottom: 1px solid #444;
+      justify-content: space-between;
     }
 
-    .photo img {
+    .header img {
       width: 100px;
       height: 100px;
       border-radius: 50%;
@@ -62,7 +58,6 @@
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
-      margin-left: 2rem;
     }
 
     .name-title h1 {
@@ -129,6 +124,18 @@
       text-decoration: underline;
     }
 
+    .lang-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .lang-btn img {
+      width: 30px;
+      height: 20px;
+    }
+
     @media screen and (max-width: 768px) {
       .container {
         grid-template-columns: 1fr;
@@ -153,20 +160,128 @@
       <img src="https://raw.githubusercontent.com/lugosibalint/cv/refs/heads/main/image.jpg" alt="Profilkép">
     </div>
     <div class="name-title">
-      <h1>Lugosi Bálint</h1>
-      <p>Informatikus</p>
+      <h1 id="name">Lugosi Bálint</h1>
+      <p id="title">Informatikus</p>
     </div>
+    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">
+      <img id="flagIcon" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Hungary.svg" alt="Hungarian Flag">
+    </button>
   </div>
 
   <div class="container">
     <div class="left">
       <div class="section fade-in">
-        <h2>Kapcsolat</h2>
-        <p>Magyarország / Hungary</p>
-        <p>+36 30 / 724 - 8919</p>
-        <p><a href="mailto:lugibalint42@gmail.com">lugibalint42@gmail.com</a></p>
+        <h2 id="contactTitle">Kapcsolat</h2>
+        <p id="location">Magyarország / Hungary</p>
+        <p id="phone">+36 30 / 724 - 8919</p>
+        <p><a href="mailto:lugibalint42@gmail.com" id="email">lugibalint42@gmail.com</a></p>
       </div>
 
       <div class="section fade-in">
-        <h2>Bemutatkozás</h2>
-        <p>Pályakezdő informatikus vagy
+        <h2 id="bioTitle">Bemutatkozás</h2>
+        <p id="bio">Pályakezdő informatikus vagyok, jelenleg egyetemi tanulmányaimat végzem az informatika területén és részmunkaidőben dolgozom IT Szakértő munkakörben. Lelkes és nyitott vagyok, hogy minél több oldalát megismerjem az informatikának. Jelenlegi célom, hogy később a szoftverfejlesztés területén helyezkedjek el. Szeretem a kreatív problémamegoldást, és szívesen dolgozom csapatban.</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="section fade-in">
+        <h2 id="educationTitle">Tanulmányok</h2>
+        <ul>
+          <li id="study1">2019-09 – 2023-06: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Informatika Ismeretek Középszint</li>
+          <li id="study2">2023-09 – 2024-05: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Szoftverfejlesztő és tesztelő OKJ</li>
+          <li id="study3">2024-09 – : Budapesti Gazdasági Egyetem, Pénzügyi és Számviteli Kar – Gazdaságinformatikus</li>
+        </ul>
+      </div>
+
+      <div class="section fade-in">
+        <h2 id="experienceTitle">Szakmai tapasztalat</h2>
+        <ul>
+          <li id="work1">2023-09 – 2024-05: Lionsdale Studio KFT. – Gyakorlati képzés – Webfejlesztés</li>
+          <li id="work2">2025-04 – : Kínai-Magyar Vasúti Nonprofit Zrt. – IT Szakértő</li>
+        </ul>
+      </div>
+
+      <div class="section fade-in">
+        <h2 id="languageTitle">Nyelvtudás</h2>
+        <p id="language">Angol nyelv – Középfok (B2)</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let isHungarian = true;
+
+    const toggleLanguage = () => {
+      isHungarian = !isHungarian;
+
+      document.getElementById("flagIcon").src = isHungarian
+        ? "https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Hungary.svg"
+        : "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_Kingdom.svg";
+
+      // Hungarian content
+      const hungarianContent = {
+        name: "Lugosi Bálint",
+        title: "Informatikus",
+        contactTitle: "Kapcsolat",
+        location: "Magyarország / Hungary",
+        phone: "+36 30 / 724 - 8919",
+        email: "lugibalint42@gmail.com",
+        bioTitle: "Bemutatkozás",
+        bio: "Pályakezdő informatikus vagyok, jelenleg egyetemi tanulmányaimat végzem az informatika területén és részmunkaidőben dolgozom IT Szakértő munkakörben. Lelkes és nyitott vagyok, hogy minél több oldalát megismerjem az informatikának. Jelenlegi célom, hogy később a szoftverfejlesztés területén helyezkedjek el. Szeretem a kreatív problémamegoldást, és szívesen dolgozom csapatban.",
+        educationTitle: "Tanulmányok",
+        study1: "2019-09 – 2023-06: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Informatika Ismeretek Középszint",
+        study2: "2023-09 – 2024-05: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Szoftverfejlesztő és tesztelő OKJ",
+        study3: "2024-09 – : Budapesti Gazdasági Egyetem, Pénzügyi és Számviteli Kar – Gazdaságinformatikus",
+        experienceTitle: "Szakmai tapasztalat",
+        work1: "2023-09 – 2024-05: Lionsdale Studio KFT. – Gyakorlati képzés – Webfejlesztés",
+        work2: "2025-04 – : Kínai-Magyar Vasúti Nonprofit Zrt. – IT Szakértő",
+        languageTitle: "Nyelvtudás",
+        language: "Angol nyelv – Középfok (B2)"
+      };
+
+      // English content
+      const englishContent = {
+        name: "Bálint Lugosi",
+        title: "Software Engineer",
+        contactTitle: "Contact",
+        location: "Hungary",
+        phone: "+36 30 / 724 - 8919",
+        email: "lugibalint42@gmail.com",
+        bioTitle: "About Me",
+        bio: "I am a beginner software engineer currently studying Computer Science and working part-time as an IT Expert. I am eager to explore various aspects of the field. My goal is to work in software development. I enjoy creative problem-solving and working in teams.",
+        educationTitle: "Education",
+        study1: "2019-09 – 2023-06: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Basic IT Knowledge",
+        study2: "2023-09 – 2024-05: BMSZC Bláthy Ottó Titusz Informatikai Technikum – Software Developer and Tester",
+        study3: "2024-09 – : Budapest Business School – Informatics in Finance",
+        experienceTitle: "Experience",
+        work1: "2023-09 – 2024-05: Lionsdale Studio KFT. – Internship – Web Development",
+        work2: "2025-04 – : China-Hungary Railway Nonprofit Zrt. – IT Expert",
+        languageTitle: "Languages",
+        language: "English – Intermediate (B2)"
+      };
+
+      // Apply content based on language selection
+      const content = isHungarian ? hungarianContent : englishContent;
+
+      document.getElementById("name").textContent = content.name;
+      document.getElementById("title").textContent = content.title;
+      document.getElementById("contactTitle").textContent = content.contactTitle;
+      document.getElementById("location").textContent = content.location;
+      document.getElementById("phone").textContent = content.phone;
+      document.getElementById("email").textContent = content.email;
+      document.getElementById("bioTitle").textContent = content.bioTitle;
+      document.getElementById("bio").textContent = content.bio;
+      document.getElementById("educationTitle").textContent = content.educationTitle;
+      document.getElementById("study1").textContent = content.study1;
+      document.getElementById("study2").textContent = content.study2;
+      document.getElementById("study3").textContent = content.study3;
+      document.getElementById("experienceTitle").textContent = content.experienceTitle;
+      document.getElementById("work1").textContent = content.work1;
+      document.getElementById("work2").textContent = content.work2;
+      document.getElementById("languageTitle").textContent = content.languageTitle;
+      document.getElementById("language").textContent = content.language;
+    };
+  </script>
+
+</body>
+</html>
